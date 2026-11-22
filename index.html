@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo"> Recipe<span>Finder</span></a>
+
+    <nav>
+      <a href="#home" class="nav-link active">Discover</a>
+      <a href="#recipes" class="nav-link">Recipes</a>
+      <button id="favoritesNav" class="nav-link"> Favorites</button>
+    </nav>
+
+    
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">COOK SOMETHING AMAZING</span>
+        <h1>Find your next<br><span>favorite meal.</span></h1>
+        <p>Discover delicious recipes from around the world and bring something special to your table.</p>
+
+        <form id="searchForm" class="search-box">
+          <span>🔍</span>
+          <input id="searchInput" type="text" placeholder="Search recipes or ingredients..." required>
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="quick-searches">
+          <span>Popular:</span>
+          <button data-search="Chicken">Chicken</button>
+          <button data-search="Pasta">Pasta</button>
+          <button data-search="Seafood">Seafood</button>
+          <button data-search="Vegetarian">Vegetarian</button>
+        </div>
+      </div>
+      <div class="hero-image"></div>
+    </section>
+
+    <section class="recipes-section" id="recipes">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">EXPLORE OUR COLLECTION</span>
+          <h2 id="sectionTitle">Discover Recipes</h2>
+          <p id="resultCount">Find something delicious to make today.</p>
+        </div>
+      </div>
+
+      <div id="statusMessage" class="status-message"></div>
+      <div id="recipeGrid" class="recipe-grid"></div>
+      <div id="pagination" class="pagination"></div>
+    </section>
+
+    <section class="favorites-section" id="favoritesSection">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">YOUR PERSONAL COLLECTION</span>
+          <h2>Favorite Recipes </h2>
+          <p>Your saved recipes, all in one place.</p>
+        </div>
+      </div>
+      <div id="favoritesGrid" class="recipe-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo"> Recipe<span>Finder</span></a>
+    <p>Made with love & a little bit of flavor.</p>
+    <small>© 2026 Recipe Finder Pro</small>
+  </footer>
+
+
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal" class="close-modal">&times;</button>
+      <div id="recipeDetails"></div>
+    </div>
+  </div>
+
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
